@@ -2,7 +2,7 @@
 
 std::string input;
 
-void spongeText(std::string s) {
+std::string spongeText(std::string s) {
     std::string str;
     bool flipCase = true;
     std::string uppedChar;
@@ -24,13 +24,14 @@ void spongeText(std::string s) {
             flipCase = true;
         }
     }
-    std::cout << str << std::endl;
+    return str;
 }
 
 int main() {
     puts("Enter text to spongecase for QuIcK aNd WiTtY rEsPoNsEs...");
     std::getline(std::cin, input);
-    spongeText(input);
+    std::string str = spongeText(input);
+    std::cout << str << std::endl;
 
     return 0;
 }
